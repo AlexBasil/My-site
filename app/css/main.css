@@ -1,0 +1,268 @@
+@import url(reset.css);
+
+article, aside, figure, figcaption, footer, header, hgroup, nav, section, summary { 
+   display: block;
+}
+
+body, html{
+	height: 100%;
+	min-width: 100%;
+    font-family: 'Arial Narrow', Helvetica, sans-serif;
+}
+.header {
+	width: auto;
+	background-color: #eff3f7;
+}
+
+.header-core {
+	margin: 0 auto;
+	width: 960px;
+	height: 120px;
+	position: relative;
+	background-color: #eff3f7;
+}
+
+.header-core img {
+	width: 250px;
+	height: 42px;
+	position: absolute;
+	top: 38px;
+}
+
+.social {
+	width: 300px;
+	position: absolute;
+	right: 1px;
+	top: 38px;
+}
+
+.social a {
+	display: block;
+	width: 47px;
+	height: 47px;
+	float: right;
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+.social .linkGIT {
+	background: url("../images/signGIT.png") no-repeat;
+}
+
+.social .linkFB {
+	background: url("../images/signFB.png") no-repeat;
+}
+
+.social .linkTW {
+	background: url("../images/signTW.png") no-repeat;
+}
+
+.social .linkVK {
+	background: url("../images/signVK.png") no-repeat;
+}
+
+/* конец блока header, начало основного блока */
+
+.wrap {
+	min-width: 100%;
+	min-height: 100%;
+	height: auto;
+	margin-bottom: -78px;
+	padding-top: 40px;
+	float: left;
+	background: url(../images/background.jpg) no-repeat;
+	-moz-background-size: 100% 100%; /* Firefox до 4.0 */
+	-webkit-background-size:  100% 100%; /* Safari и Chrome */
+	-o-background-size:  100% 100%; /* Opera до версии 10.53 */
+	background-size:  100% 100%; /* CSS3 */
+}
+
+.wrap-core {
+	margin: 0 auto;
+	width: 960px;
+}
+
+/* конец построение основного блока, начало главного меню */
+
+.mainmenu {
+	float: left;
+}
+
+.mainmenu li {
+	background-color: #eff3f7;
+	font-size: 21px;
+	border-top: 2px solid #3ba8c0;
+	text-decoration: none;
+	color: #959aa8;
+}
+
+.mainmenu a {
+	height: 23px;
+	width: 194px;
+	padding: 25px 28px;
+	display: block;
+	text-decoration: none;
+	color: #3ba8c0;
+} 
+
+.mainmenu li.aboutme {
+	background-color: #3ba8c0;
+	border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0; /* Chrom до 4.0 и Safari до 5.0*/
+	-moz-border-radius: 5px 5px 0 0; /* Firefox до 4.0 */
+}
+
+.mainmenu li.aboutme a {
+	color: #ffffff;
+}
+
+.mainmenu li.connect {
+	border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px; /* Chrom до 4.0 и Safari до 5.0*/
+	-moz-border-radius: 0 0 5px 5px; /* Firefox до 4.0 */
+}
+
+.mainmenu li.connect a {
+	color: #959aa8;
+}
+
+/* конец главного меню, начало основного блока "опыт работы" */
+
+.experience {
+	width: 600px;
+	padding: 18px 30px 45px 20px;
+	background-color: #eff3f7;
+	float: right;
+	margin-bottom: 25px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px; /* Chrom до 4.0 и Safari до 5.0*/
+	-moz-border-radius: 5px; /* Firefox до 4.0 */
+}
+
+.experience h2 {
+	color: #3ba8c0;
+	font-size: 27px;
+	position: relative;
+	margin-bottom: 48px; 
+}
+
+.experience h2:after {
+	content:'';
+	display: block;
+	width: 208px;
+	height: 2px;
+	background-color: #3ba8c0;
+	position: absolute;
+	left: -20px;
+	bottom: -22px;
+}
+
+.experience p {
+	color: #4a545d;
+	font-size: 17px;
+	position: relative;
+	margin-left: 100px;
+	margin-top: 24px;
+	position: relative;
+}
+
+.experience span {
+	font-size: 15px;
+}
+
+.experience p:before {
+	content:'';
+	display: block;
+	width: 36px;
+	height: 34px;
+	background: url(../images/portfolio.png) no-repeat;
+	position: absolute;
+	left: -66px;
+}
+
+/* конец блока с опытом работы, начало блока образование */
+
+.education {
+	width: 600px;
+	padding: 18px 30px 45px 20px;
+	margin-bottom: 40px;
+	background-color: #eff3f7;
+	float: right;
+	border-radius: 5px;
+	-webkit-border-radius: 5px; /* Chrom до 4.0 и Safari до 5.0*/
+	-moz-border-radius: 5px; /* Firefox до 4.0 */
+}
+
+.education h2 {
+	color: #3ba8c0;
+	font-size: 27px;
+	position: relative;
+	margin-bottom: 48px; 
+}
+
+.education h2:after {
+	content:'';
+	display: block;
+	width: 208px;
+	height: 2px;
+	background-color: #3ba8c0;
+	position: absolute;
+	left: -20px;
+	bottom: -22px;
+}
+
+.education p {
+	color: #4a545d;
+	font-size: 17px;
+	position: relative;
+	margin-left: 100px;
+	margin-top: 24px;
+	position: relative;
+}
+
+.education span {
+	font-size: 15px;
+}
+
+.education .first:before {
+	content:'';
+	display: block;
+	width: 41px;
+	height: 23px;
+	background: url(../images/oxfordcap.png) no-repeat;
+	position: absolute;
+	left: -71px;
+}
+
+.education .second:before {
+	content:'';
+	display: block;
+	width: 26px;
+	height: 32px;
+	background: url(../images/folder.png) no-repeat;
+	position: absolute;
+	left: -60px;
+}
+
+.clear {
+	clear: both;
+	display: block;
+	height: 78px;
+	clear: both;
+}
+/* конец блока с опытом работы, начало футера */
+
+.footer {
+	width: 100%;
+	height: 48px;
+	background-color: #eff3f7;
+	padding-top: 30px;
+	float: left;
+}
+
+.footer p {
+	margin: 0 auto;
+	width: 350px;
+	color: #4a545d;
+	font-size: 13px;
+}
