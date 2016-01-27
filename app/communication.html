@@ -1,0 +1,68 @@
+  <!DOCTYPE html>
+<html lang="ru-Ru">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="EI=edge">
+	<title>Main page</title>
+	<link rel="stylesheet" href="/bower/normalize.css/normalizecss">
+	<link rel="stylesheet" href="css/communication.css">
+	<script src="bower/modernizer/modernizer.js"></script>
+</head>
+<body>
+	<!--[if lt IE 7]>
+	<p class="browsehappy">Вы используете <strong>устаревший </strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите</a> его.</p>
+	<![endif]--> 
+	<header class="header">
+		<div class="header-core">
+			<a href="index.html"><img src="images/logo.png" alt="logotype"></a>
+			<div class="social">
+				<a href="https://github.com/AlexBasil" class="linkGIT"></a>
+				<a href="https://www.facebook.com/profile.php?id=100007633959776" class="linkFB"></a>
+				<a href="https://twitter.com/" class="linkTW"></a>
+				<a href="https://vk.com/id17533646" class="linkVK"></a>
+			</div>
+		</div>
+	</header>
+	<div class="wrap">
+		<div class="wrap-core">
+			<aside>
+				<nav class="mainmenu">
+					<ul>
+						<li class="aboutme"><a href="index.html">Обо мне</a></li>
+						<li class="myworks"><a href="myworks.html">Мои работы</a></li>
+						<li class="connect current"><a href="communication.html">Связаться со мной</a></li>
+					</ul>
+				</nav>
+				<adress class="contacts">
+					<span>Контакты</span>
+					<a href="mailto: alex.v.a@inbox.ru" class="mail">alex.v.a@inbox.ru</a>
+					<a href="tel: +79161236367" class="phone">+7 (916) 123-63-67</a>
+					<a href="skype: aleksandrov_vasiliy" class="skype">aleksandrov_vasiliy</a>
+				</adress>
+			</aside>
+			<section class="feedback">
+				<div class="top">
+					<h2>У вас интересный проект? Напишите мне</h2>
+				</div>
+				<form action="my.php" class="feedback-form">
+					<div class="input-left"><label for="name">Имя</label><input type="text" name="name" class="name" placeholder="Как к Вам обращаться"></div>
+					<div class="input-right"><label for="email">Email</label><input type="mail" name="email" class="mail" placeholder="Куда мне писать"></div>
+					<label for="message">Сообщение</label><textarea name="message" class="textarea" placeholder="Кратко в чем суть"></textarea>
+					<label for="picture">Введите код, указанный на картинке</label><input type="text" name="picture" class="picture">
+					<input type="text" name="code" class="code" placeholder="Введите код">
+					<input type="submit" value="Отправить">
+					<input type="reset" value="Очистить">	
+				</form>
+			</section>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="footer-core">
+			<div class="lock">
+				<a href="#">Войти</a>
+			</div>
+			<div class="footer-text">&copy; 2016. Это мой сайт, пожалуйста, не копируйте и не воруйте его</div>
+		</div>
+	</footer>
+</body>
+</html>

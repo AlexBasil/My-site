@@ -1,47 +1,88 @@
   <!DOCTYPE html>
-<html>
-<head>
+<html lang="ru-Ru">
 	<meta charset="utf-8">
-	<title>LoftSchool, от мыслителя к создателю</title>
+	<meta http-equiv="X-UA-Compatible" content="EI=edge">
+	<title>Main page</title>
+	<link rel="stylesheet" href="/bower/normalize.css/normalizecss">
 	<link rel="stylesheet" href="css/main.css">
-	<link href="http://allfont.ru/allfont.css?fonts=arial-narrow" rel="stylesheet" type="text/css">
+	<script src="bower/modernizer/modernizer.js"></script>
 </head>
 <body>
+	<!--[if lt IE 7]>
+	<p class="browsehappy">Вы используете <strong>устаревший </strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите</a> его.</p>
+	<![endif]--> 
 	<header class="header">
 		<div class="header-core">
-			<a href="#main"><img src="images/logo.png" width="250"></a>
+			<a href="index.html"><img src="images/logo.png" alt="logotype"></a>
 			<div class="social">
-				<a href="#git" class="linkGIT"></a>
-				<a href="#fb" class="linkFB"></a>
-				<a href="#tw" class="linkTW"></a>
-				<a href="#vk" class="linkVK"></a>
+				<a href="https://github.com/AlexBasil" class="linkGIT"></a>
+				<a href="https://www.facebook.com/profile.php?id=100007633959776" class="linkFB"></a>
+				<a href="https://twitter.com/" class="linkTW"></a>
+				<a href="https://vk.com/id17533646" class="linkVK"></a>
 			</div>
 		</div>
 	</header>
 	<div class="wrap">
 		<div class="wrap-core">
-			<nav class="mainmenu">
-				<ul>
-					<li class="aboutme"><a href="#aboutme">Обо мне</a></li>
-					<li class="myworks"><a href="#myworks">Мои работы</a></li>
-					<li class="connect"><a href="#connect">Связаться со мной</a></li>
-				</ul>
-			</nav>
-			<div class="experience">
+			<aside>
+				<nav class="mainmenu">
+					<ul>
+						<li class="aboutme current"><a href="index.html">Обо мне</a></li>
+						<li class="myworks"><a href="myworks.html">Мои работы</a></li>
+						<li class="connect"><a href="communication.html">Связаться со мной</a></li>
+					</ul>
+				</nav>
+				<adress class="contacts">
+					<span>Контакты</span>
+					<a href="mailto: alex.v.a@inbox.ru" class="mail">alex.v.a@inbox.ru</a>
+					<a href="tel: +79161236367" class="phone">+7 (916) 123-63-67</a>
+					<a href="skype: aleksandrov_vasiliy" class="skype">aleksandrov_vasiliy</a>
+				</adress>
+			</aside>
+			<section class="information">
+				<h2>Основная информация</h2>
+				<div class="avatar-wrap">
+					<div class="avatar-window">
+						<img src="images/avatar.jpg" width="220" alt="аватар" class="avatar">
+					</div>
+				</div>
+				<div class="persona-information">
+					<span class="items">Меня зовут: <span class="items-data">Александров Василий Александрович</span><br></span>
+					<span class="items">Мой возраст: <span class="items-data">28 лет</span><br></span>
+					<span class="items">Мой город: <span class="items-data">Москва, Россия</span><br></span>
+					<span class="items">Моя специализация: <span class="items-data">FRONTEND разработчик</span><br></span>
+					<div class="key-skills">Ключевые навыки: </div>
+					<div class="wrap-skills">
+						<span class="skill">html</span>
+						<span class="skill">css</span>
+						<span class="skill">javascript</span>
+						<span class="skill">git</span>
+						<span class="skill">gulp</span>
+						<span class="skill">bower</span>
+					</div>
+				</div>
+			</section>
+			<section class="experience">
 				<h2>Опыт работы</h2>
-				<p>ИП Боровицкий" - Продавец дисков<br><span>Сентябрь 2005 - Август 2008</span></p>
-				<p>ООО Системы безопастности" - Системный администратор<br><span>Июнь 2008 - Июль 2010</span></p>
-			</div>
-			<div class="education">
+				<span class="mountech name-info">ООО "Маунтэк" - Менеджер по работе с регионами</span><br><span class="date-info">Март 2013 - Август 2015</span><br>
+				<span class="byborg name-info">ООО "Буборг" - менеджер по продажам</span><br><span class="date-info">Ноябрь 2008 - Янаварь 2013</span><br>
+			</section>
+			<section class="education">
 				<h2>Образование</h2>
-				<p class="first">Незаконченное высшее. СПБГУ ИТМО<br><span>Октябрь 2012 - по настоящее время</span></p>
-				<p class="second">Курсы Loftschool.ru<br><span>Ноябрь 2014 - по настоящее время</span></p>
-			</div>
-		</div>
+				<span class="loft-school name-info">Курсы Loftschool.ru</span><br><span class="date-info">Январь 2015 - по настоящее время</span><br>
+				<span class="spbpu name-info">СПбПУ Петра Великого - Специальность: Стратегический менеджмент</span><br><span class="date-info">Сентябрь 2008 - Январь 2013</span><br>
+				<span class="colledge name-info">Московский политехнический колледж № 39 - Специальность: Коммерция</span><br><span class="date-info">Сентябрь 2005 - Июнь 2008</span><br>
+			</section>
 		<div class="clear"></div>
+		</div>
 	</div>
 	<footer class="footer">
-		<p>&copy; 2016. Это мой сайт, пожалуйста, не копируйте и не воруйте его</p>
+		<div class="footer-core">
+			<div class="lock">
+				<a href="#">Войти</a>
+			</div>
+			<div class="footer-text">&copy; 2016. Это мой сайт, пожалуйста, не копируйте и не воруйте его</div>
+		</div>
 	</footer>
 </body>
 </html>
