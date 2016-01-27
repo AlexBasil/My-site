@@ -1,0 +1,223 @@
+
+@font-face {
+    font-family: 'FiraSans Book'; /* Гарнитура шрифта */
+    src: url(../fonts/firasans-book.eot); /* Для IE5-8 */
+    src: local(FiraSans Book), url(../fonts/firasans-book.ttf); /* Для остальных браузеров */
+   }
+
+@font-face {
+    font-family: 'FiraSans Light'; /* Гарнитура шрифта */
+    src: url(../fonts/firasans-light.eot); /* Для IE5-8 */
+    src: local(FiraSans Book), url(../fonts/firasans-light.ttf); /* Для остальных браузеров */
+   }
+
+@font-face {
+    font-family: 'FiraSans Medium'; /* Гарнитура шрифта */
+    src: url(../fonts/firasans-medium.eot); /* Для IE5-8 */
+    src: local(FiraSans Medium), url(../fonts/firasans-medium.ttf); /* Для остальных браузеров */
+   }
+
+@font-face {
+    font-family: 'ProximaNovaCond Semibold'; /* Гарнитура шрифта */
+    src: local(ProximaNovaCond Semibold), url(../fonts/ProximaNovaCond-Semibold.otf); /* Для остальных браузеров */
+   }
+
+article, aside, figure, figcaption, footer, header, hgroup, nav, section, summary { 
+   display: block;
+}
+
+html, body{
+	height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	min-width: 100%;
+    font-family: 'FiraSans Book', Helvetica, sans-serif;
+    background: url(../images/background.jpg) repeat;
+}
+
+.wrap {
+	min-height: 100%;
+    height: auto !important;
+    height: 100%;
+	margin-top: 40px;
+	margin-bottom: -80px;
+    padding: 0;
+}
+
+.wrap-core {
+	margin: 0 auto;
+	position: relative;
+	min-height: 100%;
+	width: 960px;
+}
+
+/* End of wrap style, begining of main menu */
+
+ .authorization-form {
+ 	width: 592px;
+ 	margin: 100px auto;
+	padding-bottom: 25px;
+	text-align: center;
+	background-color: #eff3f7;
+	border-radius: 5px;
+	-webkit-border-radius: 5px; /* Chrom äî 4.0 è Safari äî 5.0*/
+	-moz-border-radius: 5px; /* Firefox äî 4.0 */
+	box-shadow: 0 5px 10px 0 #000000;
+	-webkit-box-shadow: 0 5px 10px 0 #000000;
+	-moz-box-shadow: 0 5px 10px 0 #000000;
+ }
+
+.hat {
+	position: relative;
+	width: 100%;
+	height: 90px;
+	background-color: #48cbe8;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.hat h2 {
+	font-size: 40px;
+	color: #ffffff;
+	padding-top: 25px;
+}
+
+.hat:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 16px;
+	background-color: #67dffa;
+	position: absolute;
+	bottom: -16px;
+}
+
+.authorization-form label {
+	font: 36px  'FiraSans Light', Helvetica, sans-serif;
+	color: #959aa8;
+}
+
+.authorization-form input {
+	width: 414px;
+	height: 60px;
+	padding-left: 10px;
+	color: #48cbe8;
+	font: 17px  'FiraSans Light', Helvetica, sans-serif;
+	border: 1px solid #48cbe8;
+	border-radius: 3px;
+	-webkit-border-radius: 3px; /* Chrom  4.0 & Safari äî 5.0*/
+	-moz-border-radius: 3px; /* Firefox  4.0 */
+}
+
+.authorization-form input[type="button"] {
+	display: inline-block;
+	width: 226px;
+	height: 50px;
+	margin-top: 32px;
+	color: #ffffff;
+	font-size: 36px;
+	background-color: #48cbe8;
+	border: none;
+	border-radius: 3px;
+	-webkit-border-radius: 3px; /* Chrom  4.0 & Safari äî 5.0*/
+	-moz-border-radius: 3px; /* Firefox  4.0 */
+	box-shadow: 0 5px 0 -1px #3ba8c0;
+	-webkit-box-shadow: 0 5px 0 -1px #3ba8c0;
+	-moz-box-shadow: 0 5px 0 -1px #3ba8c0;
+}
+
+.authorization-form input[type="button"]:hover {
+	padding-top: 2px;
+	box-shadow: 0 3px 0 0 #3ba8c0;
+	-webkit-box-shadow: 0 3px 0 0 #3ba8c0;
+	-moz-box-shadow: 0 3px 0 0 #3ba8c0;
+}
+
+.authorization-form input[type="button"]:active {
+	padding-top: 3px;
+	box-shadow: 0 -4px 0   #3ba8c0;
+	-webkit-box-shadow: 0 -4px 0  #3ba8c0;
+	-moz-box-shadow: 0 -4px 0  #3ba8c0;
+}
+
+input:focus, textarea:focus  {
+	outline: none;
+}
+
+/*Решение для placeholder*/
+
+input::-webkit-input-placeholder       {color: #48cbe8; opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {color: #48cbe8; opacity: 1; transition: opacity 0.3s ease;} /* Firefox 19+ */
+input:-moz-placeholder                 {color: #48cbe8; opacity: 1; transition: opacity 0.3s ease;} /* Firefox 18- */
+input:-ms-input-placeholder            {color: #48cbe8; opacity: 1; transition: opacity 0.3s ease;}
+input:focus::-webkit-input-placeholder {color: #48cbe8; opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {color: #48cbe8; opacity: 0; transition: opacity 0.3s ease;} /* Firefox 19+ */
+input:focus:-moz-placeholder           {color: #48cbe8; opacity: 0; transition: opacity 0.3s ease;} /* Firefox 18- */
+input:focus:-ms-input-placeholder      {color: #48cbe8; opacity: 0; transition: opacity 0.3s ease;}
+
+.clear {
+	clear: both;
+	display: block;
+	height: 80px;
+}
+/* End of education block */
+/*Begining of footer*/
+
+.footer { 
+    height: 80px;
+    min-width: 1100px;
+	background-color: #eff3f7;
+	font: 13px 'FiraSans Light', Arial, sans-serif;
+    color: #4a545d;
+}
+
+.footer-core {
+	margin: 0 auto;
+	width: 960px;
+	position: relative; 
+}
+
+.footer-core .footer-text {
+	margin: 0 180px;
+	padding-top: 30px;
+	text-align: center;
+}
+
+.footer-core .lock {
+	position: absolute;
+	top: 26px;
+	left: 20px;
+}
+
+.lock a {
+	display: block;
+	height: 40px;
+	font: 16px 'FiraSans Light', Arial, sans-serif;
+	line-height: 2.2;
+	color: #4a545d;
+	text-decoration: none;
+	background: url(../images/iconSprite.png) -10px -70px no-repeat;
+	padding-left: 40px;
+}
+
+
+.lock a:hover {
+	text-decoration: underline;
+	background: url(../images/iconSprite.png) -10px -8px no-repeat;
+}
+
+.footer-core:after {
+	content:" ";
+	height: 3px;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	background: rgb(255,255,255); /* Old browsers */
+	background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(28,102,122,1) 53%, rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(28,102,122,1) 53%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(28,102,122,1) 53%, rgba(255,255,255,1) 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}

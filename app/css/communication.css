@@ -195,7 +195,7 @@ aside {
 .mainmenu .current a {
 	background-color: #3ba8c0;
 	color: #ffffff;
-
+	margin: -2px 0;
 }
 
 /*Begining of sidebar*/
@@ -267,7 +267,6 @@ aside {
 .feedback {
 	width: 610px;
 	height: 780px;
-	overflow: auto;
 	background-color: #eff3f7;
 	float: right;
 	margin-bottom: 25px;

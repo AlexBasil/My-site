@@ -195,7 +195,7 @@ aside {
 .mainmenu .current a {
 	background-color: #3ba8c0;
 	color: #ffffff;
-
+	margin: -2px 0;
 }
 
 /*Begining of sidebar*/

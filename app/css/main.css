@@ -162,8 +162,8 @@ aside {
 	position: relative;
 }
 
-.mainmenu a {
-	display: block;
+.mainmenu a {	display: block;
+
 	padding: 18px 28px;
 	background-color: #eff3f7;
 	color: #959aa8;
@@ -189,7 +189,7 @@ aside {
 .mainmenu .current a {
 	background-color: #3ba8c0;
 	color: #ffffff;
-
+	margin: -2px 0;
 }
 
 /*Begining of sidebar*/
