@@ -22,7 +22,7 @@
     src: local(ProximaNovaCond Semibold), url(../fonts/ProximaNovaCond-Semibold.otf); /* Для остальных браузеров */
    }
 
-article, aside, figure, figcaption, footer, header, hgroup, nav, section, summary { 
+article, aside, figure, figcaption, footer, header, hgroup, nav, section, summary, address { 
    display: block;
 }
 
@@ -46,20 +46,24 @@ body {
 	margin: 0 auto;
 	max-width: 1210px;
 	min-width: 960px;
-	height: 120px;
+	height: 118px;
 	position: relative;
 	background-color: #eff3f7;
 }
 
-.header-core > a {
+.header-core .logo {
 	position: absolute;
 	top: 38px;
 }
 
+.header-core .logo img {
+	border: none;
+}
+
 .social {
 	position: absolute;
-	right: 1px;
-	top: 38px;
+	right: 22px;
+	top: 34px;
 }
 
 .social a {
@@ -80,7 +84,7 @@ body {
 }
 
 .social .linkFB {
-	background: url("../images/logoSprite.png")-9px -268px no-repeat;
+	background: url("../images/logoSprite.png") -9px -268px no-repeat;
 }
 
 .social .linkTW {
@@ -119,6 +123,17 @@ body {
     background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(28,102,122,1) 53%, rgba(255,255,255,1) 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
 }
+
+
+.ie8 .header-core:after {
+	content:" ";
+	height: 3px;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	background: url(../images/blue-line.jpg) center center no-repeat;
+}
+
 /* End of the header */
 .wrap {
 	min-height: 100%;
@@ -142,7 +157,7 @@ aside {
 }
 
 .mainmenu {
-	margin-bottom:  22px;
+	margin-bottom:  25px;
 }
 
 .mainmenu ul {
@@ -164,7 +179,7 @@ aside {
 
 .mainmenu a {	display: block;
 
-	padding: 18px 28px;
+	padding: 20px 28px;
 	background-color: #eff3f7;
 	color: #959aa8;
 	text-decoration: none;
@@ -196,11 +211,12 @@ aside {
 
 .contacts {
 	width: 250px;
+	font-style: normal;
 }
 
 .contacts span {
 	display: block;
-	padding: 10px 10px;
+	padding: 6px 18px 0px;
 	color: #ffffff;
 	font-size: 21px;
 	background-color: #3ba8c0;
@@ -209,7 +225,7 @@ aside {
 .contacts a {
 	position: relative;
 	display: block;
-	padding: 10px 0px 10px 80px;
+	padding: 10px 0px 4px 80px;
 	color: #ffffff;
 	font-size: 17px;
 	text-decoration: none;
@@ -260,7 +276,7 @@ aside {
 
 .information {
 	width: 600px;
-	padding: 18px 30px 45px 20px;
+	padding: 0px 30px 45px 20px;
 	background-color: #eff3f7;
 	float: right;
 	margin-bottom: 25px;
@@ -269,27 +285,28 @@ aside {
 	-moz-border-radius: 5px; /* Firefox äî 4.0 */
 }
 
-.information h2 {
+.information .caption-two {
 	color: #3ba8c0;
 	font-size: 27px;
 	position: relative;
-	margin-bottom: 48px; 
+	line-height: 18px;
+	margin-bottom: 44px;
 }
 
-.information h2:after {
+.information .caption-two:after {
 	content:'';
 	display: block;
-	width: 208px;
+	width: 340px;
 	height: 2px;
 	background-color: #3ba8c0;
 	position: absolute;
-	left: -20px;
-	bottom: -22px;
+	left: -22px;
+	bottom: -28px;
 }
 
 .avatar-wrap {
 	float: left;
-	margin-left: 55px;
+	margin-left: 34px;
 	margin-top: 18px;
 }
 
@@ -308,18 +325,19 @@ aside {
 	right: 20px;
 }
 .persona-information {
-	width: 369px;
-	margin-left: 25px;
-	padding-right: 1px;
+	width: 394px;
 	float: right;
 }
 
 .items {
+	display: block;
+	margin-bottom: 7px;
 	font: 17px 'FiraSans Medium', Arial, sans-serif;
 	color: #4a545d;
 }
 
 .items-data {
+	padding-left: 16px;
 	font: 15px 'FiraSans Book', Arial, sans-serif;
 	color: #5a636b;
 }
@@ -332,13 +350,14 @@ aside {
 }
 
 .skill {
-	padding: 5px 15px;
+	padding: 3px 15px;
+	margin-right: 2px;
 	font: 14px 'ProximaNovaCond Semibold', Arial, sans-serif;
-	line-height: 34px;
+	line-height: 30px;
 	color: #ffffff;
-	border-radius: 5px;
-	-webkit-border-radius: 5px; /* Chrom äî 4.0 è Safari äî 5.0*/
-	-moz-border-radius: 5px; /* Firefox äî 4.0 */
+	border-radius: 3px;
+	-webkit-border-radius: 3px; /* Chrom äî 4.0 è Safari äî 5.0*/
+	-moz-border-radius: 3px; /* Firefox äî 4.0 */
 	background: rgb(59,168,192); /* Old browsers */
 	background: -moz-linear-gradient(top, rgba(59,168,192,1) 0%, rgba(59,168,192,1) 50%, rgba(46,140,162,1) 51%, rgba(46,140,162,1) 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top, rgba(59,168,192,1) 0%,rgba(59,168,192,1) 50%,rgba(46,140,162,1) 51%,rgba(46,140,162,1) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -350,14 +369,15 @@ aside {
 
 .wrap-skills {
 	width: 200px;
-	float: right;
+	margin-left: 13px;
+	float: left;
 }
  /* End of info-block*/
  
 
 .experience {
 	width: 600px;
-	padding: 18px 30px 45px 20px;
+	padding: 0px 30px 45px 20px;
 	background-color: #eff3f7;
 	float: right;
 	margin-bottom: 25px;
@@ -366,14 +386,15 @@ aside {
 	-moz-border-radius: 5px; /* Firefox äî 4.0 */
 }
 
-.experience h2 {
+.experience .caption-two {
 	color: #3ba8c0;
 	font-size: 27px;
 	position: relative;
-	margin-bottom: 33px; 
+	margin-bottom: 43px; 
+	line-height: 20px;
 }
 
-.experience h2:after {
+.experience .caption-two:after {
 	content:'';
 	display: block;
 	width: 208px;
@@ -385,7 +406,7 @@ aside {
 }
 
 .name-info {
-	display: inline-block;
+	display: block;
 	color: #4a545d;
 	font-size: 17px;
 	position: relative;
@@ -404,8 +425,8 @@ aside {
 	width: 41px;
 	height: 35px;
 	position: absolute;
-	left: -71px;
-	top: 10px;
+	left: -67px;
+	top: 4px;
 }
 
  .mountech.name-info:before {
@@ -421,7 +442,7 @@ aside {
 
 .education {
 	width: 600px;
-	padding: 18px 30px 45px 20px;
+	padding: 0px 30px 45px 20px;
 	margin-bottom: 40px;
 	background-color: #eff3f7;
 	float: right;
@@ -430,22 +451,23 @@ aside {
 	-moz-border-radius: 5px; /* Firefox äî 4.0 */
 }
 
-.education h2 {
+.education .caption-two{
 	color: #3ba8c0;
 	font-size: 27px;
 	position: relative;
-	margin-bottom: 38px; 
+	line-height: 0px;
+	margin-bottom: 52px; 
 }
 
-.education h2:after {
+.education .caption-two:after {
 	content:'';
 	display: block;
-	width: 208px;
+	width: 214px;
 	height: 2px;
 	background-color: #3ba8c0;
 	position: absolute;
-	left: -20px;
-	bottom: -22px;
+	left: -22px;
+	bottom: -32px;
 }
 
 .loft-school.name-info:before {
@@ -522,4 +544,14 @@ aside {
     background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(28,102,122,1) 53%, rgba(255,255,255,1) 100%);
     background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(28,102,122,1) 53%, rgba(255,255,255,1) 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}
+
+
+.ie8 .footer-core:after {
+	content:" ";
+	height: 3px;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	background: url(../images/blue-line.jpg) center center no-repeat;
 }

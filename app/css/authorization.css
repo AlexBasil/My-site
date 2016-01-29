@@ -79,7 +79,7 @@ body {
 	margin-bottom: 40px;
 }
 
-.hat h2 {
+.hat .caption-two {
 	font-size: 40px;
 	color: #ffffff;
 	padding-top: 25px;
@@ -96,6 +96,7 @@ body {
 }
 
 .authorization-form label {
+	display: block;
 	font: 36px  'FiraSans Light', Helvetica, sans-serif;
 	color: #959aa8;
 }

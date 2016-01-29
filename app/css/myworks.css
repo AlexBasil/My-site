@@ -28,7 +28,7 @@
     src: local(ProximaNovaCond Semibold), url(../fonts/ProximaNovaCond-Semibold.otf); /* Для остальных браузеров */
    }
 
-article, aside, figure, figcaption, footer, header, hgroup, nav, section, summary { 
+article, aside, figure, figcaption, footer, header, hgroup, nav, section, address, summary { 
    display: block;
 }
 
@@ -52,20 +52,24 @@ body {
 	margin: 0 auto;
 	max-width: 1210px;
 	min-width: 960px;
-	height: 120px;
+	height: 118px;
 	position: relative;
 	background-color: #eff3f7;
 }
 
-.header-core > a {
+.header-core .logo {
 	position: absolute;
 	top: 38px;
 }
 
+.header-core .logo img {
+	border: none;
+}
+
 .social {
 	position: absolute;
-	right: 1px;
-	top: 38px;
+	right: 22px;
+	top: 34px;
 }
 
 .social a {
@@ -86,7 +90,7 @@ body {
 }
 
 .social .linkFB {
-	background: url("../images/logoSprite.png")-9px -268px no-repeat;
+	background: url("../images/logoSprite.png") -9px -268px no-repeat;
 }
 
 .social .linkTW {
@@ -125,6 +129,15 @@ body {
     background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(28,102,122,1) 53%, rgba(255,255,255,1) 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
 }
+
+.ie8 .header-core:after {
+	content:" ";
+	height: 3px;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	background: url(../images/blue-line.jpg) center center no-repeat;
+}
 /* End of the header */
 .wrap {
 	min-height: 100%;
@@ -143,12 +156,17 @@ body {
 }
 
 /* End of wrap style, begining of main menu */
+
+img {
+	border: none;
+}
+
 aside {
 	float: left;
 }
 
 .mainmenu {
-	margin-bottom:  22px;
+	margin-bottom:  25px;
 }
 
 .mainmenu ul {
@@ -170,7 +188,7 @@ aside {
 
 .mainmenu a {
 	display: block;
-	padding: 18px 28px;
+	padding: 20px 28px;
 	background-color: #eff3f7;
 	color: #959aa8;
 	text-decoration: none;
@@ -202,11 +220,12 @@ aside {
 
 .contacts {
 	width: 250px;
+	font-style: normal;
 }
 
 .contacts span {
 	display: block;
-	padding: 10px 10px;
+	padding: 6px 18px 0px;
 	color: #ffffff;
 	font-size: 21px;
 	background-color: #3ba8c0;
@@ -215,7 +234,7 @@ aside {
 .contacts a {
 	position: relative;
 	display: block;
-	padding: 10px 0px 10px 80px;
+	padding: 10px 0px 4px 80px;
 	color: #ffffff;
 	font-size: 17px;
 	text-decoration: none;
@@ -262,13 +281,11 @@ aside {
 
 /*End of sidebar*/
 
-/*End of main menu */
-
 .my-works {
 	width: 610px;
 	height: 780px;
 	overflow: auto;
-	padding: 0px 20px 45px 20px;
+	padding: 0px 0px 45px 20px;
 	background-color: #eff3f7;
 	float: right;
 	margin-bottom: 25px;
@@ -277,14 +294,15 @@ aside {
 	-moz-border-radius: 5px; /* Firefox äî 4.0 */
 }
 
-.my-works h2 {
+.my-works .caption-two {
 	color: #3ba8c0;
 	font-size: 27px;
 	position: relative;
+	line-height: 22px;
 	margin-bottom: 48px; 
 }
 
-.my-works h2:after {
+.my-works h2.caption-two:after {
 	content:'';
 	display: block;
 	width: 208px;
@@ -297,17 +315,13 @@ aside {
 
 .works {
 	display: inline-block;
-	height: 220px;
+	height: 235px;
 	width: 185px;
 	overflow: auto;
 	text-align: center;
 	vertical-align:top;
-	margin-right: 22px;
+	margin-right: 14px;
 	margin-bottom: 10px;
-}
-
-.works:nth-child(4n) {
-	margin-right: 0;
 }
 
 .image-wrap {
@@ -329,7 +343,7 @@ aside {
 	border: 3px solid #ffffff;
 	position: absolute;
 	top: 50px;
-	left: 58px;
+	left: 54px;
 	border-radius: 7px;
 	-webkit-border-radius: 7px; /* Chrom äî 4.0 è Safari äî 5.0 */
 	-moz-border-radius: 7px; /* Firefox äî 4.0 */
@@ -346,6 +360,8 @@ aside {
 }
 
 .works > a {
+	display: block;
+	padding: 5px 0px;
 	font: 13px 'FiraSans LightItalic', Arial, sans-serif;
 	color: #41b9d4;
 	text-decoration: none;
@@ -448,4 +464,13 @@ aside {
     background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(28,102,122,1) 53%, rgba(255,255,255,1) 100%);
     background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(28,102,122,1) 53%, rgba(255,255,255,1) 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}
+
+.ie8 .footer-core:after {
+	content:" ";
+	height: 3px;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	background: url(../images/blue-line.jpg) center center no-repeat;
 }
