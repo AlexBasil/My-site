@@ -1,0 +1,165 @@
+@import url("navigation-contacts.css");
+
+
+.centralBlock {
+	width: 600px;
+	padding: 0px 30px 45px 20px;
+	background-color: #eff3f7;
+	float: right;
+	margin-bottom: 25px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px; /* Chrom äî 4.0 è Safari äî 5.0*/
+	-moz-border-radius: 5px; /* Firefox äî 4.0 */
+}
+
+.centralBlock .caption-two {
+	color: #3ba8c0;
+	font-size: 27px;
+	position: relative;
+	margin-bottom: 31px;
+	margin-top: 14px;
+}
+
+.centralBlock .caption-two:after {
+	content:'';
+	display: block;
+	width: 340px;
+	height: 2px;
+	background-color: #3ba8c0;
+	position: absolute;
+	left: -22px;
+	top: 52px;
+}
+
+.avatar-wrap {
+	float: left;
+	margin-left: 34px;
+	margin-top: 18px;
+}
+
+.avatar-window {
+	width: 142px;
+	height: 142px;
+	overflow: hidden;
+	border: 4px solid #32a7bd;
+	border-radius: 50% 50%;
+	-webkit-border-radius: 50% 50%; /* Chrom äî 4.0 è Safari äî 5.0 */
+	-moz-border-radius: 50% 50%; /* Firefox äî 4.0 */
+}
+
+.avatar {
+	position: relative;
+	right: 20px;
+}
+.personal-information {
+	width: 394px;
+	float: right;
+}
+
+.items {
+	display: block;
+	margin-bottom: 7px;
+	font: 17px 'FiraSans Medium', Arial, sans-serif;
+	color: #4a545d;
+}
+
+.items-data {
+	padding-left: 16px;
+	font: 15px 'FiraSans Book', Arial, sans-serif;
+	color: #5a636b;
+}
+
+.key-skills {
+	float: left;
+	width: 160px;
+	font: 17px 'FiraSans Medium', Arial, sans-serif;
+	color: #4a545d;
+}
+
+.skill {
+	padding: 3px 15px;
+	margin-right: 2px;
+	font: 14px 'ProximaNovaCond Semibold', Arial, sans-serif;
+	line-height: 30px;
+	color: #ffffff;
+	border-radius: 3px;
+	-webkit-border-radius: 3px; /* Chrom äî 4.0 è Safari äî 5.0*/
+	-moz-border-radius: 3px; /* Firefox äî 4.0 */
+	background: rgb(59,168,192); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(59,168,192,1) 0%, rgba(59,168,192,1) 50%, rgba(46,140,162,1) 51%, rgba(46,140,162,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(59,168,192,1) 0%,rgba(59,168,192,1) 50%,rgba(46,140,162,1) 51%,rgba(46,140,162,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(59,168,192,1) 0%,rgba(59,168,192,1) 50%,rgba(46,140,162,1) 51%,rgba(46,140,162,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ba8c0', endColorstr='#2e8ca2',GradientType=0 ); /* IE6-9 */
+	copy
+
+}
+
+.wrap-skills {
+	width: 200px;
+	margin-left: 13px;
+	float: left;
+}
+ /* End of info-block*/
+
+ .experience  .caption-two:after {
+	content:'';
+	display: block;
+	width: 210px;
+	height: 2px;
+	background-color: #3ba8c0;
+	position: absolute;
+	left: -22px;
+	top: 52px;
+}
+ 
+.name-info {
+	display: block;
+	color: #4a545d;
+	font-size: 17px;
+	position: relative;
+	margin-left: 100px;
+	margin-top: 10px;
+}
+
+.date-info {
+	font: 15px 'FiraSans Light', Arial, sans-serif;
+	margin-left: 100px;
+}
+
+.name-info:before {
+	content:'';
+	display: block;
+	width: 41px;
+	height: 35px;
+	position: absolute;
+	left: -67px;
+	top: 4px;
+	background: url(../images/iconSprite.png) -12px -352px no-repeat;
+}
+
+/* End of experience block */
+/*Begining of Education block*/
+
+.education  .caption-two:after {
+	content:'';
+	display: block;
+	width: 215px;
+	height: 2px;
+	background-color: #3ba8c0;
+	position: absolute;
+	left: -22px;
+	top: 52px;
+}
+
+
+.loft-school.name-info:before {
+	background: url(../images/iconSprite.png) -8px -138px no-repeat;
+}
+
+.spbpu.name-info:before {
+	background: url(../images/iconSprite.png) -15px -235px no-repeat;
+}
+
+.colledge.name-info:before {
+	background: url(../images/iconSprite.png) -15px -235px no-repeat;
+}

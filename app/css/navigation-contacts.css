@@ -1,0 +1,119 @@
+aside {
+	float: left;
+}
+
+.mainmenu {
+	margin-bottom:  25px;
+}
+
+.mainmenu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 250px;
+	overflow: hidden;
+	border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px; /* Chrom äî 4.0 è Safari äî 5.0*/
+	-moz-border-radius: 5px 5px 5px 5px; /* Firefox äî 4.0 */
+}
+
+
+.mainmenu li {
+	font-size: 21px;
+	position: relative;
+}
+
+.mainmenu a {	display: block;
+
+	padding: 20px 28px;
+	background-color: #eff3f7;
+	color: #959aa8;
+	text-decoration: none;
+} 
+
+
+.mainmenu li:not(:last-child):after {
+	content:"";
+	display: block;
+	position: absolute;
+	bottom: 0;
+	height: 2px;
+	width: 230px;
+	margin: 0px 10px;
+	background-color: #3ba8c0;
+}
+
+.mainmenu a:hover {
+	color: #3ba8c0;
+}
+
+.mainmenu .current a {
+	background-color: #3ba8c0;
+	color: #ffffff;
+	margin: -2px 0;
+}
+
+/*Begining of sidebar*/
+
+.contacts {
+	width: 250px;
+	font-style: normal;
+}
+
+.contacts span {
+	display: block;
+	padding: 6px 18px 0px;
+	color: #ffffff;
+	font-size: 21px;
+	background-color: #3ba8c0;
+}
+
+.contacts a {
+	position: relative;
+	display: block;
+	padding: 10px 0px 4px 80px;
+	color: #ffffff;
+	font-size: 17px;
+	text-decoration: none;
+}
+
+.contacts .mail {background-color: #41b9d4;}
+.contacts .phone {background-color: #48cbe8;}
+.contacts .skype {background-color: #51daf8;}
+
+.contacts a:before {
+	content:'';
+	display: block;
+	width: 21px;
+	height: 21px;
+	position: absolute;
+	left: 40px;
+	top: 12px;
+}
+
+
+.contacts a.mail:before {
+	background: url(../images/iconSprite.png) -15px -198px no-repeat;
+}
+
+.contacts a.phone:before {
+	background: url(../images/iconSprite.png) -15px -301px no-repeat;
+}
+
+.contacts a.skype:before {
+	background: url(../images/iconSprite.png) -15px -415px no-repeat;
+}
+
+.contacts span {
+	border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px; /* Chrom äî 4.0 è Safari äî 5.0*/
+	-moz-border-radius: 5px 5px 0px 0px; /* Firefox äî 4.0 */
+}
+
+.contacts a:last-child {
+	border-radius: 0px 0px 5px 5px;
+	-webkit-border-radius: 0px 0px 5px 5px; /* Chrom äî 4.0 è Safari äî 5.0*/
+	-moz-border-radius: 0px 0px 5px 5px; /* Firefox äî 4.0 */
+}
+
+/*End of sidebar*/
