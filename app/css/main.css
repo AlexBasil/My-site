@@ -1,24 +1,30 @@
 
 @font-face {
-    font-family: 'FiraSans Book'; /* Гарнитура шрифта */
+    font-family: 'FiraSans Book'; 
     src: url(../fonts/firasans-book.eot); /* Для IE5-8 */
     src: local(FiraSans Book), url(../fonts/firasans-book.ttf); /* Для остальных браузеров */
    }
 
 @font-face {
-    font-family: 'FiraSans Light'; /* Гарнитура шрифта */
+    font-family: 'FiraSans Light'; 
     src: url(../fonts/firasans-light.eot); /* Для IE5-8 */
     src: local(FiraSans Book), url(../fonts/firasans-light.ttf); /* Для остальных браузеров */
    }
 
 @font-face {
-    font-family: 'FiraSans Medium'; /* Гарнитура шрифта */
+    font-family: 'FiraSans Medium'; 
     src: url(../fonts/firasans-medium.eot); /* Для IE5-8 */
     src: local(FiraSans Medium), url(../fonts/firasans-medium.ttf); /* Для остальных браузеров */
    }
 
 @font-face {
-    font-family: 'ProximaNovaCond Semibold'; /* Гарнитура шрифта */
+	font-family: 'FiraSans Regular'; 
+	src: url(../firasans-regular.eot); /* Для IE5-8 */
+	src: local(FiraSans Book), url(../fonts/firasans-regular.ttf); /* Для остальных браузеров */
+   }
+
+@font-face {
+    font-family: 'ProximaNovaCond Semibold'; 
     src: local(ProximaNovaCond Semibold), url(../fonts/ProximaNovaCond-Semibold.otf); /* Для остальных браузеров */
    }
 
@@ -38,7 +44,7 @@ body {
     background: url(../images/background.jpg) repeat;
 }
 .header {
-	width: auto;
+	min-width: 1100px;
 	background-color: #eff3f7;
 	margin-bottom: 40px;
 }

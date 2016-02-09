@@ -12,6 +12,9 @@
 	<!--[if IE 8]> <html class="ie8" lang="en"> <![endif]-->
 	<script src="bower/modernizer/modernizr.js"></script>
 	<script src="js/html5shiv.js"></script>
+	<script src="bower/jquery/dist/jquery.js"></script>
+	<!-- <script src="js/bPopup.js"></script> -->
+	<script src="js/main.js"></script>
 </head>
 <body>
 	<!--[if lt IE 7]>
@@ -79,14 +82,43 @@
 					<a href="">www.site.ru</a>
 					<span>Информация о проекте 4 ревью 2 строки....</span>
 				</div>
-				<div class="new-work">
-					<a href="href://mysite.ru"></a>
-					<span>Добавть проект</span>
+				<div onclick="openPopup()" class="new-work">
+					<!-- <span>Добавить проект</span> -->
+					<a href="href://mysite.ru">Добавить проект</a>
 				</div>
 			</section>
-		<div class="clear"></div>
+			<div class="clear"></div>
 		</div>
 	</div>
+	<div id="popup" class="add-form">
+				<div class="hat"><h2 class="caption-two">Добавление проекта</h2></div>
+				<form action="my.php" class="add_work">
+					<div class="tt-wrap">
+						<label for="inputName">Название проекта</label>
+						<div class="tooltip" id="tt_name">Введите название</div>
+						<input id="inputName" type="text" name="name" onfocus="name_cancel()" placeholder="Введите название">
+					</div>
+					<div class="tt-wrap">
+						<label for="upload">Картинка проекта</label>
+						<div class="tooltip" id="tt_file">Изображение</div>
+						<div id="file" class="download_field">
+							<div class="download_img"></div>
+							<input id="upload" type="file" name="file" onclick="file_cancel()" onchange="changeAdress()" placeholder="Загрузите изображение">
+						</div>
+					</div>
+					<div class="tt-wrap">
+						<label for="tooltip">URL проекта</label>
+						<div class="tooltip" id="tt_url">Ссылка на проект</div>
+						<input id="url" type="url" name="url" onfocus="url_cancel()" placeholder="Добавить ссылку">
+					</div>
+					<div class="tt-wrap">
+						<label for="text_field">Описание</label>
+						<div class="tooltip" id="tt_textarea">Краткое описание</div>
+						<textarea id="text_field" name="about" onfocus="textarea_cancel()" cols="49" rows="4" placeholder="Пара слов о Вашем проекте"></textarea>
+					</div> 
+					<input type="button" name="add" value="Добавить" onclick="tooltip()">
+				</form>
+				</div>
 	<footer class="footer">
 		<div class="footer-core">
 			<div class="lock">
@@ -95,7 +127,5 @@
 			<div class="footer-text">&copy; 2016. Это мой сайт, пожалуйста, не копируйте и не воруйте его</div>
 		</div>
 	</footer>
-	<script src="bower/jquery/dist/jquery.js"></script>
-	<script src="js/main.js"></script>
 </body>
 </html>

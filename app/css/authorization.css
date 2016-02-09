@@ -106,9 +106,4 @@ input:focus::-moz-placeholder          {color: #48cbe8; opacity: 0; transition: 
 input:focus:-moz-placeholder           {color: #48cbe8; opacity: 0; transition: opacity 0.3s ease;} /* Firefox 18- */
 input:focus:-ms-input-placeholder      {color: #48cbe8; opacity: 0; transition: opacity 0.3s ease;}
 
-.clear {
-	clear: both;
-	display: block;
-	height: 80px;
-}
 /* End of education block */

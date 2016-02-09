@@ -102,6 +102,7 @@
 	-moz-border-radius: 5px; /* Firefox äî 4.0 */
 	background: #edf8fc url("../images/logo-create.png") center 40% no-repeat;
 	position: relative;
+	cursor: pointer;
 }
 
 .new-work span {
@@ -113,11 +114,203 @@
 }
 
 .new-work a {
-	display: block;
-	height: 126px;
-	width: 180px;
+	padding-bottom: 80px;
+	font: 13px 'FiraSans Light', Arial, sans-serif;
+	color: #3ba8c0;
+	text-decoration: none;
 }
 
-
-
 /* End of my-works block */
+/* Start of add-form */
+
+
+.add-form {
+	display: none;
+	margin: 40px auto;
+ 	width: 430px;
+	padding-bottom: 20px;
+	background-color: #eff3f7;
+	border-radius: 5px;
+	-webkit-border-radius: 5px; /* Chrom äî 4.0 è Safari äî 5.0*/
+	-moz-border-radius: 5px; /* Firefox äî 4.0 */
+ }
+
+.add-form .hat {
+	position: relative;
+	width: 100%;
+	background-color: #48cbe8;
+}
+
+.hat .caption-two {
+	font: 26px 'FiraSans Regular', Arial, sans-serif;
+	color: #ffffff;
+	padding: 14px 10px;
+	margin-top: 0px;
+}
+
+.hat:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 10px;
+	position: absolute;
+	bottom: -10px;
+	background-color: #67dffa;
+}
+
+.add_work {
+	margin: 0 auto;
+	width: 378px;
+}
+
+.add_work label {
+	position: relative;
+	display: block;
+	font: 22px;
+	color: #959aa8;
+	padding: 7px 0px;
+}
+
+.add_work input[type="text"],
+.add_work input[type="url"] {
+	width: 364px;
+	height: 47px;
+	padding-left: 10px;
+	color: #48cbe8;
+	font: 15px  'FiraSans Light', Helvetica, sans-serif;
+	border: 1px solid #48cbe8;
+	border-radius: 3px;
+	-webkit-border-radius: 3px; /* Chrom  4.0 & Safari äî 5.0*/
+	-moz-border-radius: 3px; /* Firefox  4.0 */
+}
+
+.download_field {
+	width: 354px;
+	height: 21px;
+	padding: 13px 10px;
+	position: relative;
+	overflow: hidden;
+	color: #48cbe8;
+	font: 15px  'FiraSans Light', Helvetica, sans-serif;
+	background-color: #ffffff;
+	border: 1px solid #48cbe8;
+	border-radius: 3px;
+	-webkit-border-radius: 3px; /* Chrom  4.0 & Safari äî 5.0*/
+	-moz-border-radius: 3px; /* Firefox  4.0 */
+}
+
+.download_field .download_img {
+	width: 52px;
+	height: 47px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: url(../images/download.png)  no-repeat; 
+	background-size: 54px 47px;
+	z-index: 1;
+}
+
+.add_work input[type="file"] {
+	width: 53px;
+    height: 70px;
+    position: absolute;
+    right: 0px;
+    top: -23px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.add_work textarea {
+	margin-bottom: 12px;
+	padding-left: 10px;
+	color: #48cbe8;
+	font: 15px  'FiraSans Light', Helvetica, sans-serif;
+	resize: none;
+	border: 1px solid #48cbe8;
+	border-radius: 3px;
+	-webkit-border-radius: 3px; /* Chrom  4.0 & Safari äî 5.0*/
+	-moz-border-radius: 3px; /* Firefox  4.0 */
+}
+
+.add_work input[type="button"] {
+	display: block;
+	width: 148px;
+	height: 32px;
+	margin: 0 auto;
+	color: #ffffff;
+	font-size: 22px;
+	background-color: #48cbe8;
+	border: none;
+	border-radius: 3px;
+	-webkit-border-radius: 3px; /* Chrom  4.0 & Safari äî 5.0*/
+	-moz-border-radius: 3px; /* Firefox  4.0 */
+	box-shadow: 0 5px 3px -1px #3ba8c0;
+	-webkit-box-shadow: 0 5px 3px -1px #3ba8c0;
+	-moz-box-shadow: 0 5px 3px -1px #3ba8c0;
+}
+
+.add_work input[type="button"]:hover {
+	padding-top: 2px;
+	box-shadow: 0 3px 3px 0 #3ba8c0;
+	-webkit-box-shadow: 0 3px 3px 0 #3ba8c0;
+	-moz-box-shadow: 0 3px 3px 0 #3ba8c0;
+}
+
+.add_work input[type="button"]:active {
+	box-shadow: 0 -2px 3px -1px #3ba8c0;
+	-webkit-box-shadow: 0 -2px 3px -1px #3ba8c0;
+	-moz-box-shadow: 0 -2px 3px -1px #3ba8c0;
+}
+
+input:focus, textarea:focus  {
+	outline: none;
+}
+
+.tt-wrap {
+	position: relative;
+}
+
+.tooltip {
+	display:none;
+	width: 128px;
+	padding: 6px 4px 5px;
+	position: absolute;
+	left: -154px;
+	top: 49px;
+	font-size: 13px;
+	color: #ffffff;
+	border-radius: 3px 0 0 3px;
+	-webkit-border-radius: 3px 0 0 3px; /* Chrom  4.0 & Safari äî 5.0*/
+	-moz-border-radius: 3px 0 0 3px; /* Firefox  4.0 */
+	background-color: #f97e76; 
+}
+
+.tooltip:after {
+	content: "";
+	position: absolute;
+	right: -32px;
+	top: 0px;
+	border: 16px solid transparent;
+    border-left: 16px solid #f97e76;
+}
+
+/*Решение для placeholder*/
+
+input::-webkit-input-placeholder       {color: #48cbe8; opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {color: #48cbe8; opacity: 1; transition: opacity 0.3s ease;} /* Firefox 19+ */
+input:-moz-placeholder                 {color: #48cbe8; opacity: 1; transition: opacity 0.3s ease;} /* Firefox 18- */
+input:-ms-input-placeholder            {color: #48cbe8; opacity: 1; transition: opacity 0.3s ease;}
+input:focus::-webkit-input-placeholder {color: #48cbe8; opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {color: #48cbe8; opacity: 0; transition: opacity 0.3s ease;} /* Firefox 19+ */
+input:focus:-moz-placeholder           {color: #48cbe8; opacity: 0; transition: opacity 0.3s ease;} /* Firefox 18- */
+input:focus:-ms-input-placeholder      {color: #48cbe8; opacity: 0; transition: opacity 0.3s ease;}
+
+textarea::-webkit-input-placeholder       {color: #48cbe8; opacity: 1; transition: opacity 0.3s ease;}
+textarea::-moz-placeholder                {color: #48cbe8; opacity: 1; transition: opacity 0.3s ease;} /* Firefox 19+ */
+textarea:-moz-placeholder                 {color: #48cbe8; opacity: 1; transition: opacity 0.3s ease;} /* Firefox 18- */
+textarea:-ms-input-placeholder            {color: #48cbe8; opacity: 1; transition: opacity 0.3s ease;}
+textarea:focus::-webkit-input-placeholder {color: #48cbe8; opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus::-moz-placeholder          {color: #48cbe8; opacity: 0; transition: opacity 0.3s ease;} /* Firefox 19+ */
+textarea:focus:-moz-placeholder           {color: #48cbe8; opacity: 0; transition: opacity 0.3s ease;} /* Firefox 18- */
+textarea:focus:-ms-input-placeholder      {color: #48cbe8; opacity: 0; transition: opacity 0.3s ease;}
