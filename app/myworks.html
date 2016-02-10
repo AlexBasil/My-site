@@ -13,8 +13,7 @@
 	<script src="bower/modernizer/modernizr.js"></script>
 	<script src="js/html5shiv.js"></script>
 	<script src="bower/jquery/dist/jquery.js"></script>
-	<!-- <script src="js/bPopup.js"></script> -->
-	<script src="js/main.js"></script>
+	<script src="bower/bPopup/jquery.bpopup.js"></script>
 </head>
 <body>
 	<!--[if lt IE 7]>
@@ -83,7 +82,6 @@
 					<span>Информация о проекте 4 ревью 2 строки....</span>
 				</div>
 				<div onclick="openPopup()" class="new-work">
-					<!-- <span>Добавить проект</span> -->
 					<a href="href://mysite.ru">Добавить проект</a>
 				</div>
 			</section>
@@ -101,9 +99,9 @@
 					<div class="tt-wrap">
 						<label for="upload">Картинка проекта</label>
 						<div class="tooltip" id="tt_file">Изображение</div>
-						<div id="file" class="download_field">
+						<div id="file" class="download_field">Загрузите изображение
 							<div class="download_img"></div>
-							<input id="upload" type="file" name="file" onclick="file_cancel()" onchange="changeAdress()" placeholder="Загрузите изображение">
+							<input id="upload" type="file" name="file" onclick="file_cancel()" onchange="changeAdress()">
 						</div>
 					</div>
 					<div class="tt-wrap">
@@ -127,5 +125,7 @@
 			<div class="footer-text">&copy; 2016. Это мой сайт, пожалуйста, не копируйте и не воруйте его</div>
 		</div>
 	</footer>
+	<script src="js/main.js"></script>
+	<script src="js/myworks.js"></script>
 </body>
 </html>

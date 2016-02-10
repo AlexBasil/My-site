@@ -20,11 +20,17 @@
 		<div class="wrap-core">
 			<form action="my.php" class="authorization-form">
 				<div class="hat"><h2 class="caption-two">Авторизуйтесь</h2></div>
-				<label for="login">Логин</label>
-				<input type="text" name="login" id="login" placeholder="Введите логин">
-				<label for="password">Пароль</label>
-				<input type="password" name="password" id="password" placeholder="Введите пароль">
-				<input type="button" name="enter" value="Войти">
+				<div class="wrap_input">
+					<label for="login">Логин</label>
+					<div class="tooltip tt_login">Введите логин</div>
+					<input type="text" name="login" id="login" onfocus="login_cancel()" placeholder="Введите логин">
+				</div>
+				<div class="wrap_input">
+					<label for="password">Пароль</label>
+					<div class="tooltip tt_password">Введите пароль</div>
+					<input type="password" name="password" id="password" onfocus="password_cancel()" placeholder="Введите пароль">
+				</div>
+				<input type="button" name="enter" value="Войти" onclick="tt_authorization()">
 			</form>
 			<div class="clear"></div>
 		</div>
@@ -39,5 +45,6 @@
 	</footer>
 	<script src="bower/jquery/dist/jquery.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/authorization.js"></script>
 </body>
 </html>

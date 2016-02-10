@@ -49,14 +49,29 @@
 				<div class="top">
 					<h2 class="caption-two">У вас интересный проект? Напишите мне</h2>
 				</div>
-				<form action="my.php" class="feedback-form">
-					<div class="input-left"><label for="name">Имя</label><input type="text" name="name" class="name" placeholder="Как к Вам обращаться"></div>
-					<div class="input-right"><label for="email">Email</label><input type="mail" name="email" class="mail" placeholder="Куда мне писать"></div>
-					<label for="message">Сообщение</label><textarea cols="62" rows="8" name="message" class="textarea" placeholder="Кратко в чем суть"></textarea>
-					<label for="picture">Введите код, указанный на картинке</label><input type="text" name="picture" class="picture">
-					<input type="text" name="code" class="code" placeholder="Введите код">
-					<input type="submit" value="Отправить">
-					<input type="reset" value="Очистить">	
+				<form action="#" class="feedback-form">
+					<div class="input-left">
+						<label for="name">Имя</label>
+						<div class="tooltip tooltip_name">Введите название</div>
+						<input type="text" name="name" class="name" onfocus="name_cancel()" placeholder="Как к Вам обращаться">
+					</div>
+					<div class="input-right">
+						<label for="email">Email</label>
+						<div class="tooltip tooltip_email">Введите Email</div>
+						<input type="mail" name="email" class="email" onfocus="email_cancel()" placeholder="Куда мне писать"></div>
+					<div class="wrap_input">	
+						<label for="message">Сообщение</label>
+						<div class="tooltip tooltip_textfield">Добавьте описание</div>
+						<textarea cols="62" rows="8" name="message" class="textarea" onfocus="field_cancel()" placeholder="Кратко в чем суть"></textarea>
+					</div>
+					<label for="picture">Введите код, указанный на картинке</label>
+					<input type="text" name="picture" class="picture">
+					<div class="wrap_input">
+						<div class="tooltip tooltip_capcha">Введите код</div>
+						<input type="text" name="code" class="code" onfocus="code_cancel()" placeholder="Введите код">
+					</div>
+					<input type="submit" value="Отправить" onclick="tt_communication()">
+					<input type="reset" value="Очистить" onclick="full_reset()">	
 				</form>
 			</section>
 		<div class="clear"></div>
@@ -72,5 +87,6 @@
 	</footer>
 	<script src="bower/jquery/dist/jquery.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/communication.js"></script>
 </body>
 </html>

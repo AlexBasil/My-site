@@ -72,19 +72,21 @@ textarea:focus:-ms-input-placeholder      {color: #48cbe8; opacity: 0; transitio
 
 
 .input-left {
+	position: relative;
 	width: 192px;
 	float: left;
 	margin-bottom: 10px;
 }
 
 .input-right {
+	position: relative;
 	width: 192px;
 	float: right;
 	margin-bottom: 10px;
 }
 
 .feedback-form .name,
-.feedback-form .mail  {
+.feedback-form .email  {
 	width: 170px;
 	height: 40px;
 	padding-left: 10px;
@@ -201,4 +203,84 @@ textarea:focus:-ms-input-placeholder      {color: #48cbe8; opacity: 0; transitio
 	-webkit-box-shadow: 0 -2px  0  #687b8f
 	-moz-box-shadow: 0 -2px 0  #687b8f;
 }
-/* End of my-works block */ 
+
+.wrap_input {
+	display: inline-block;
+	position: relative;
+}
+
+.tooltip_name {
+	display:none;
+	padding: 6px 10px 5px;
+	position: absolute;
+	left: -154px;
+	top: 37px;
+	font-size: 13px;
+	color: #ffffff;
+	border-radius: 3px 0 0 3px;
+	-webkit-border-radius: 3px 0 0 3px; /* Chrom  4.0 & Safari äî 5.0*/
+	-moz-border-radius: 3px 0 0 3px; /* Firefox  4.0 */
+	background-color: #f97e76; 
+}
+
+.tooltip_name:after,
+.tooltip_textfield:after {
+	content: "";
+	position: absolute;
+	right: -32px;
+	top: 0px;
+	border: 16px solid transparent;
+    border-left: 16px solid #f97e76;
+}
+
+.tooltip_email {
+	display:none;
+	padding: 6px 10px 5px;
+	position: absolute;
+	right: -114px;
+	top: 34px;
+	font-size: 13px;
+	color: #ffffff;
+	border-radius: 0 3px 3px 0;
+	-webkit-border-radius: 0 3px 3px 0; /* Chrom  4.0 & Safari äî 5.0*/
+	-moz-border-radius: 0 3px 3px 0; /* Firefox  4.0 */
+	background-color: #f97e76;
+}
+
+.tooltip_email:before,
+.tooltip_capcha:before {
+	content: "";
+	position: absolute;
+	left: -31px;
+	top: 0px;
+	border: 16px solid transparent;
+    border-right: 16px solid #f97e76;
+}
+
+.tooltip_textfield {
+	display:none;
+	padding: 6px 10px 5px;
+	position: absolute;
+	left: -154px;
+	top: 107px;
+	font-size: 13px;
+	color: #ffffff;
+	border-radius: 3px 0 0 3px;
+	-webkit-border-radius: 3px 0 0 3px; /* Chrom  4.0 & Safari äî 5.0*/
+	-moz-border-radius: 3px 0 0 3px; /* Firefox  4.0 */
+	background-color: #f97e76; 
+}
+
+.tooltip_capcha {
+    display:none;
+	padding: 6px 10px 5px;
+	position: absolute;
+	right: -110px;
+    top: -2px;
+	font-size: 13px;
+	color: #ffffff;
+	border-radius: 0 3px 3px 0;
+	-webkit-border-radius: 0 3px 3px 0; /* Chrom  4.0 & Safari äî 5.0*/
+	-moz-border-radius: 0 3px 3px 0; /* Firefox  4.0 */
+	background-color: #f97e76;
+}

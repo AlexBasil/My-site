@@ -101,20 +101,12 @@
 	-webkit-border-radius: 5px; /* Chrom äî 4.0 è Safari äî 5.0 */
 	-moz-border-radius: 5px; /* Firefox äî 4.0 */
 	background: #edf8fc url("../images/logo-create.png") center 40% no-repeat;
-	position: relative;
 	cursor: pointer;
 }
 
-.new-work span {
-	font: 13px 'FiraSans Light', Arial, sans-serif;
-	color: #3ba8c0;
-	position: absolute;
-	top: 80px;
-	left: 45px;
-}
-
 .new-work a {
-	padding-bottom: 80px;
+	display: inline-block;
+	margin-top: 80px;
 	font: 13px 'FiraSans Light', Arial, sans-serif;
 	color: #3ba8c0;
 	text-decoration: none;
@@ -273,11 +265,7 @@ input:focus, textarea:focus  {
 
 .tooltip {
 	display:none;
-	width: 128px;
-	padding: 6px 4px 5px;
-	position: absolute;
-	left: -154px;
-	top: 49px;
+	padding: 6px 10px 5px;
 	font-size: 13px;
 	color: #ffffff;
 	border-radius: 3px 0 0 3px;
@@ -294,6 +282,31 @@ input:focus, textarea:focus  {
 	border: 16px solid transparent;
     border-left: 16px solid #f97e76;
 }
+
+#tt_name {
+	position: absolute;
+	left: -147px;
+	top: 49px;
+}
+
+#tt_file {
+	position: absolute;
+	left: -120px;
+	top: 49px;
+}
+
+#tt_url {
+	position: absolute;
+	left: -144px;
+	top: 49px;
+}
+
+#tt_textarea {
+	position: absolute;
+	left: -147px;
+	top: 75px;
+}
+
 
 /*Решение для placeholder*/
 

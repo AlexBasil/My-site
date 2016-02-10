@@ -5,6 +5,12 @@
     src: local(FiraSans Book), url(../fonts/firasans-book.ttf); /* Для остальных браузеров */
    }
 
+   @font-face {
+    font-family: 'FiraSans Bold'; 
+    src: url(../fonts/firasans-bold.eot); /* Для IE5-8 */
+    src: local(FiraSans Book), url(../fonts/firasans-bold.ttf); /* Для остальных браузеров */
+   }
+
 @font-face {
     font-family: 'FiraSans Light'; 
     src: url(../fonts/firasans-light.eot); /* Для IE5-8 */
