@@ -11,7 +11,9 @@
 	<link rel="stylesheet" href="css/aboutMe.css">
 	<!--[if IE 8]> <html class="ie8" lang="en"> <![endif]-->
 	<script src="bower/modernizer/modernizr.js"></script>
-	<script src="js/html5shiv.js"></script>
+	<script src="bower/jquery/dist/jquery.js"></script>
+	<script src="bower/html5shiv/dist/html5shiv.js"></script>
+	<script src="bower/jquery.placeholder/jquery.placeholder.js"></script>
 </head>
 <body>
 	<!--[if lt IE 7]>
@@ -19,7 +21,7 @@
 	<![endif]--> 
 	<header class="header">
 		<div class="header-core">
-			<a href="index.html" class="logo"><img src="images/logo.png" alt="logotype"></a>
+			<a href="/" class="logo"><img src="images/logo.png" alt="logotype"></a>
 			<div class="social">
 				<a href="https://github.com/AlexBasil" class="linkGIT"></a>
 				<a href="https://www.facebook.com/profile.php?id=100007633959776" class="linkFB"></a>
@@ -31,11 +33,11 @@
 	<div class="wrap">
 		<div class="wrap-core">
 			<aside>
-				<nav class="mainmenu">
-					<ul>
-						<li class="aboutme current"><a href="index.html">Обо мне</a></li>
-						<li class="myworks"><a href="myworks.html">Мои работы</a></li>
-						<li class="connect"><a href="communication.html">Связаться со мной</a></li>
+				<nav class="mainmenu" >
+					<ul class="list">
+						<li class="list_item current"><a href="index.html">Обо мне</a></li>
+						<li class="list_item"><a href="myworks.html">Мои работы</a></li>
+						<li class="list_item"><a href="communication.html">Связаться со мной</a></li>
 					</ul>
 				</nav>
 				<address class="contacts">
@@ -90,7 +92,6 @@
 			<div class="footer-text">&copy; 2016. Это мой сайт, пожалуйста, не копируйте и не воруйте его</div>
 		</div>
 	</footer>
-	<script src="bower/jquery/dist/jquery.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

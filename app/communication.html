@@ -11,7 +11,8 @@
 	<link rel="stylesheet" href="css/communication.css">
 	<!--[if IE 8]> <html class="ie8" lang="en"> <![endif]-->
 	<script src="bower/modernizer/modernizr.js"></script>
-	<script src="js/html5shiv.js"></script>
+	<script src="bower/html5shiv/dist/html5shiv.js"></script>
+	<script src="bower/jquery.placeholder/jquery.placeholder.js"></script>
 </head>
 <body>
 	<!--[if lt IE 7]>
@@ -32,10 +33,10 @@
 		<div class="wrap-core">
 			<aside>
 				<nav class="mainmenu">
-					<ul>
-						<li class="aboutme"><a href="index.html">Обо мне</a></li>
-						<li class="myworks"><a href="myworks.html">Мои работы</a></li>
-						<li class="connect current"><a href="communication.html">Связаться со мной</a></li>
+					<ul class="list">
+						<li class="list_item"><a href="index.html">Обо мне</a></li>
+						<li class="list_item"><a href="myworks.html">Мои работы</a></li>
+						<li class="list_item current"><a href="communication.html">Связаться со мной</a></li>
 					</ul>
 				</nav>
 				<address class="contacts">
@@ -49,28 +50,28 @@
 				<div class="top">
 					<h2 class="caption-two">У вас интересный проект? Напишите мне</h2>
 				</div>
-				<form action="#" class="feedback-form">
+				<form action="" class="feedback-form">
 					<div class="input-left">
 						<label for="name">Имя</label>
 						<div class="tooltip tooltip_name">Введите название</div>
-						<input type="text" name="name" class="name" onfocus="name_cancel()" placeholder="Как к Вам обращаться">
+						<input type="text" name="name" class="name" onfocus="cancel_error()" placeholder="Как к Вам обращаться">
 					</div>
 					<div class="input-right">
 						<label for="email">Email</label>
 						<div class="tooltip tooltip_email">Введите Email</div>
-						<input type="mail" name="email" class="email" onfocus="email_cancel()" placeholder="Куда мне писать"></div>
+						<input type="mail" name="email" class="email" onfocus="cancel_error()" placeholder="Куда мне писать"></div>
 					<div class="wrap_input">	
 						<label for="message">Сообщение</label>
 						<div class="tooltip tooltip_textfield">Добавьте описание</div>
-						<textarea cols="62" rows="8" name="message" class="textarea" onfocus="field_cancel()" placeholder="Кратко в чем суть"></textarea>
+						<textarea cols="62" rows="8" name="message" class="textarea" onfocus="cancel_error()" placeholder="Кратко в чем суть"></textarea>
 					</div>
 					<label for="picture">Введите код, указанный на картинке</label>
 					<input type="text" name="picture" class="picture">
 					<div class="wrap_input">
 						<div class="tooltip tooltip_capcha">Введите код</div>
-						<input type="text" name="code" class="code" onfocus="code_cancel()" placeholder="Введите код">
+						<input type="text" name="code" class="code" onfocus="cancel_error()" placeholder="Введите код">
 					</div>
-					<input type="submit" value="Отправить" onclick="tt_communication()">
+					<input type="submit" value="Отправить" onclick="errorInput()">
 					<input type="reset" value="Очистить" onclick="full_reset()">	
 				</form>
 			</section>
@@ -87,6 +88,5 @@
 	</footer>
 	<script src="bower/jquery/dist/jquery.js"></script>
 	<script src="js/main.js"></script>
-	<script src="js/communication.js"></script>
 </body>
 </html>

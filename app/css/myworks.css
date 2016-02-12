@@ -155,7 +155,7 @@
 	width: 378px;
 }
 
-.add_work label {
+.add_work .input_label {
 	position: relative;
 	display: block;
 	font: 22px;
@@ -163,8 +163,7 @@
 	padding: 7px 0px;
 }
 
-.add_work input[type="text"],
-.add_work input[type="url"] {
+.inputName, .url {
 	width: 364px;
 	height: 47px;
 	padding-left: 10px;
@@ -198,22 +197,23 @@
 	right: 0;
 	top: 0;
 	background: url(../images/download.png)  no-repeat; 
-	background-size: 54px 47px;
 	z-index: 1;
 }
 
-.add_work input[type="file"] {
+#upload {
 	width: 53px;
     height: 70px;
     position: absolute;
     right: 0px;
     top: -23px;
     opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE8 */
     cursor: pointer;
     z-index: 3;
 }
 
-.add_work textarea {
+.text_field {
+	width: 362px;
 	margin-bottom: 12px;
 	padding-left: 10px;
 	color: #48cbe8;
@@ -327,3 +327,8 @@ textarea:focus::-webkit-input-placeholder {color: #48cbe8; opacity: 0; transitio
 textarea:focus::-moz-placeholder          {color: #48cbe8; opacity: 0; transition: opacity 0.3s ease;} /* Firefox 19+ */
 textarea:focus:-moz-placeholder           {color: #48cbe8; opacity: 0; transition: opacity 0.3s ease;} /* Firefox 18- */
 textarea:focus:-ms-input-placeholder      {color: #48cbe8; opacity: 0; transition: opacity 0.3s ease;}
+
+.error {
+	background-color: #fdd5d2;
+	border-color: #f97e76;
+}

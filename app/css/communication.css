@@ -99,6 +99,7 @@ textarea:focus:-ms-input-placeholder      {color: #48cbe8; opacity: 0; transitio
 }
 
 .feedback-form .textarea {
+	width: 387px;
 	color: #48cbe8;
 	padding-left: 10px;
 	padding-top: 6px;

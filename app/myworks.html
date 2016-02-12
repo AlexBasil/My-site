@@ -11,9 +11,10 @@
 	<link rel="stylesheet" href="css/myworks.css">
 	<!--[if IE 8]> <html class="ie8" lang="en"> <![endif]-->
 	<script src="bower/modernizer/modernizr.js"></script>
-	<script src="js/html5shiv.js"></script>
+	<script src="bower/html5shiv/dist/html5shiv.js"></script>
 	<script src="bower/jquery/dist/jquery.js"></script>
 	<script src="bower/bPopup/jquery.bpopup.js"></script>
+	<script src="bower/jquery.placeholder/jquery.placeholder.js"></script>
 </head>
 <body>
 	<!--[if lt IE 7]>
@@ -34,10 +35,10 @@
 		<div class="wrap-core">
 			<aside>
 				<nav class="mainmenu">
-					<ul>
-						<li class="aboutme"><a href="index.html">Обо мне</a></li>
-						<li class="myworks current"><a href="myworks.html">Мои работы</a></li>
-						<li class="connect"><a href="communication.html">Связаться со мной</a></li>
+					<ul class="list">
+						<li class="list_item"><a href="index.html">Обо мне</a></li>
+						<li class="list_item current"><a href="myworks.html">Мои работы</a></li>
+						<li class="list_item"><a href="communication.html">Связаться со мной</a></li>
 					</ul>
 				</nav>
 				<address class="contacts">
@@ -92,29 +93,30 @@
 				<div class="hat"><h2 class="caption-two">Добавление проекта</h2></div>
 				<form action="my.php" class="add_work">
 					<div class="tt-wrap">
-						<label for="inputName">Название проекта</label>
+						<label class="input_label" for="inputName">Название проекта</label>
 						<div class="tooltip" id="tt_name">Введите название</div>
-						<input id="inputName" type="text" name="name" onfocus="name_cancel()" placeholder="Введите название">
+						<input class="inputName" type="text" name="name" onfocus="cancel_error()" placeholder="Введите название">
 					</div>
 					<div class="tt-wrap">
-						<label for="upload">Картинка проекта</label>
+						<label class="input_label" for="upload">Картинка проекта</label>
 						<div class="tooltip" id="tt_file">Изображение</div>
-						<div id="file" class="download_field">Загрузите изображение
+						<div class="download_field">
+							<span class="text_file">Загрузите изображение</span>
 							<div class="download_img"></div>
-							<input id="upload" type="file" name="file" onclick="file_cancel()" onchange="changeAdress()">
+							<input id="upload" type="file" name="file" onclick="cancel_file()" onchange="changeAdress()">
 						</div>
 					</div>
 					<div class="tt-wrap">
-						<label for="tooltip">URL проекта</label>
+						<label class="input_label" for="tooltip">URL проекта</label>
 						<div class="tooltip" id="tt_url">Ссылка на проект</div>
-						<input id="url" type="url" name="url" onfocus="url_cancel()" placeholder="Добавить ссылку">
+						<input class="url" type="url" name="url" onfocus="cancel_error()" placeholder="Добавить ссылку">
 					</div>
 					<div class="tt-wrap">
-						<label for="text_field">Описание</label>
+						<label class="input_label" for="text_field">Описание</label>
 						<div class="tooltip" id="tt_textarea">Краткое описание</div>
-						<textarea id="text_field" name="about" onfocus="textarea_cancel()" cols="49" rows="4" placeholder="Пара слов о Вашем проекте"></textarea>
+						<textarea class="text_field" name="about" onfocus="cancel_error()" cols="49" rows="4" placeholder="Пара слов о Вашем проекте"></textarea>
 					</div> 
-					<input type="button" name="add" value="Добавить" onclick="tooltip()">
+					<input type="button" name="add" value="Добавить" onclick="errorInput()">
 				</form>
 				</div>
 	<footer class="footer">
@@ -126,6 +128,5 @@
 		</div>
 	</footer>
 	<script src="js/main.js"></script>
-	<script src="js/myworks.js"></script>
 </body>
 </html>
