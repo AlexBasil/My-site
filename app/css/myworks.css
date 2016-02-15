@@ -200,7 +200,7 @@
 	z-index: 1;
 }
 
-#upload {
+.upload {
 	width: 53px;
     height: 70px;
     position: absolute;
@@ -225,7 +225,7 @@
 	-moz-border-radius: 3px; /* Firefox  4.0 */
 }
 
-.add_work input[type="button"] {
+.add_work .add_button {
 	display: block;
 	width: 148px;
 	height: 32px;
@@ -242,14 +242,14 @@
 	-moz-box-shadow: 0 5px 3px -1px #3ba8c0;
 }
 
-.add_work input[type="button"]:hover {
+.add_work .add_button:hover {
 	padding-top: 2px;
 	box-shadow: 0 3px 3px 0 #3ba8c0;
 	-webkit-box-shadow: 0 3px 3px 0 #3ba8c0;
 	-moz-box-shadow: 0 3px 3px 0 #3ba8c0;
 }
 
-.add_work input[type="button"]:active {
+.add_work .add_button:active {
 	box-shadow: 0 -2px 3px -1px #3ba8c0;
 	-webkit-box-shadow: 0 -2px 3px -1px #3ba8c0;
 	-moz-box-shadow: 0 -2px 3px -1px #3ba8c0;
@@ -285,25 +285,25 @@ input:focus, textarea:focus  {
 
 #tt_name {
 	position: absolute;
-	left: -147px;
+	left: -148px;
 	top: 49px;
 }
 
 #tt_file {
 	position: absolute;
-	left: -120px;
+	left: -121px;
 	top: 49px;
 }
 
 #tt_url {
 	position: absolute;
-	left: -144px;
+	left: -145px;
 	top: 49px;
 }
 
 #tt_textarea {
 	position: absolute;
-	left: -147px;
+	left: -148px;
 	top: 75px;
 }
 

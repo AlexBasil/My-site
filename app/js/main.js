@@ -7,16 +7,30 @@ function openPopup() {
         });
 };
 
-var elem = $('form').find('input, textarea, .download_field').not('input[type="submit"], input[type="reset"]');
+var elem = $("form").find('input, textarea');
 
 function errorInput() {
 
-	if ($.trim(elem.val()).length > 0) {
+	elem.each( function(index) {
 
-	} else {
-		elem.addClass('error');
-		elem.siblings('.tooltip').css('display','block');
-	}
+		if ( $(this).attr('class') !== undefined){
+
+			if ( $.trim($(this).val()) > '' ) {
+
+			} else{
+
+				$(this).siblings('.tooltip').css('display', 'block');
+				$(this).addClass('error');
+			}		 
+	  	}
+	});
+
+	if ( $('.upload').val().length > 0 ) {
+
+		} else {
+			$('.download_field').siblings('.tooltip').css('display', 'block');
+			$('.download_field').addClass('error');
+		};
 };
 
 
@@ -31,7 +45,6 @@ function cancel_file() {
 	$('.download_field').siblings('.tooltip').css('display','none');
 };
 
-
 function full_reset() {
 	elem.removeClass('error');
 	elem.siblings('.tooltip').css('display','none');
@@ -39,7 +52,7 @@ function full_reset() {
 
 function changeAdress() {
 
-	if ($('#upload').val().length > 0) {
-		$('.text_file').text($('#upload').val());
+	if ($('.upload').val().length > 0) {
+		$('.text_file').text($('.upload').val());
 	}
 }

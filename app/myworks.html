@@ -91,11 +91,11 @@
 	</div>
 	<div id="popup" class="add-form">
 				<div class="hat"><h2 class="caption-two">Добавление проекта</h2></div>
-				<form action="my.php" class="add_work">
+				<form action="my.php" class="add_work" onclick="cancel_error()">
 					<div class="tt-wrap">
 						<label class="input_label" for="inputName">Название проекта</label>
 						<div class="tooltip" id="tt_name">Введите название</div>
-						<input class="inputName" type="text" name="name" onfocus="cancel_error()" placeholder="Введите название">
+						<input class="inputName" type="text" name="name"  placeholder="Введите название">
 					</div>
 					<div class="tt-wrap">
 						<label class="input_label" for="upload">Картинка проекта</label>
@@ -103,20 +103,20 @@
 						<div class="download_field">
 							<span class="text_file">Загрузите изображение</span>
 							<div class="download_img"></div>
-							<input id="upload" type="file" name="file" onclick="cancel_file()" onchange="changeAdress()">
+							<input class="upload" type="file" name="file" onclick="cancel_file()" onchange="changeAdress()">
 						</div>
 					</div>
 					<div class="tt-wrap">
 						<label class="input_label" for="tooltip">URL проекта</label>
 						<div class="tooltip" id="tt_url">Ссылка на проект</div>
-						<input class="url" type="url" name="url" onfocus="cancel_error()" placeholder="Добавить ссылку">
+						<input class="url" type="url" name="url" placeholder="Добавить ссылку">
 					</div>
 					<div class="tt-wrap">
 						<label class="input_label" for="text_field">Описание</label>
 						<div class="tooltip" id="tt_textarea">Краткое описание</div>
-						<textarea class="text_field" name="about" onfocus="cancel_error()" cols="49" rows="4" placeholder="Пара слов о Вашем проекте"></textarea>
+						<textarea class="text_field" name="about" cols="49" rows="4" placeholder="Пара слов о Вашем проекте"></textarea>
 					</div> 
-					<input type="button" name="add" value="Добавить" onclick="errorInput()">
+					<button type="button" class="add_button" name="add" onclick="errorInput()">Добавить</button>
 				</form>
 				</div>
 	<footer class="footer">

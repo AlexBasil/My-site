@@ -42,7 +42,7 @@
 	bottom: -16px;
 }
 
-.authorization-form label {
+.authorization-form .label {
 	display: block;
 	font: 36px  'FiraSans Light', Helvetica, sans-serif;
 	color: #959aa8;
@@ -60,7 +60,7 @@
 	-moz-border-radius: 3px; /* Firefox  4.0 */
 }
 
-.authorization-form input[type="button"] {
+.authorization-form .enter_button {
 	display: inline-block;
 	width: 226px;
 	height: 50px;
@@ -77,14 +77,14 @@
 	-moz-box-shadow: 0 5px 0 -1px #3ba8c0;
 }
 
-.authorization-form input[type="button"]:hover {
+.authorization-form .enter_button:hover {
 	padding-top: 2px;
 	box-shadow: 0 3px 0 0 #3ba8c0;
 	-webkit-box-shadow: 0 3px 0 0 #3ba8c0;
 	-moz-box-shadow: 0 3px 0 0 #3ba8c0;
 }
 
-.authorization-form input[type="button"]:active {
+.authorization-form .enter_button:active {
 	padding-top: 3px;
 	box-shadow: 0 -4px 0   #3ba8c0;
 	-webkit-box-shadow: 0 -4px 0  #3ba8c0;
