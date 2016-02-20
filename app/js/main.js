@@ -1,58 +1,105 @@
+var app = (function() {
+	var init = function() {
+		setUpListeners();
+	};
+	var setUpListeners = function() {
+		var field = $('form').find('input, textarea').not('input[type="submit"], input[type="reset"]');
+		$('.new-work').on('click', showElements);
+		$('#cover').on('click', showElements);
+		$('form').on('submit', checkForm);
+		field.on('click', cancel_error);
+		$('input[type="file"]').on('change', changeFile );
+	};
 
-function openPopup() {
-	var win_width = $ ( window ).width()/2 - $('#popup').width()/2;
-	 $('#popup').bPopup({
-            follow: [false, false], //x, y
-            position: [win_width, 50] //x, y
-        });
-};
 
-var elem = $("form").find('input, textarea');
+	var showElements = function() {
+		$('.add_block').toggle();
+		$('#cover').toggle();
+	};
 
-function errorInput() {
+	var checkForm = function(e) {
+		e.preventDefault();
 
-	elem.each( function(index) {
+		var form = $(this);
+		var items = form.find('input, textarea').not('input[type="submit"], input[type="reset"]');
 
-		if ( $(this).attr('class') !== undefined){
+		var flag = true;
 
-			if ( $.trim($(this).val()) > '' ) {
-
-			} else{
-
-				$(this).siblings('.tooltip').css('display', 'block');
+		$.each(items, function(index, val) {
+			var content = $(val).val().trim();
+			if (content.length === 0) {
 				$(this).addClass('error');
-			}		 
-	  	}
-	});
+				showTooltip(this);
 
-	if ( $('.upload').val().length > 0 ) {
+				if ($('input[type="file"]').val()!==undefined) {
+		    	inherit_style(this);
+		    	}
 
-		} else {
-			$('.download_field').siblings('.tooltip').css('display', 'block');
-			$('.download_field').addClass('error');
-		};
-};
+				flag = false;
+			} 
+		}); 
 
+		if(flag){
+			var defObj = sendForm(form);
+		}
+	};
 
-function cancel_error() {
-	$(document.activeElement).removeClass('error');
-	$(document.activeElement).siblings('.tooltip').css('display','none');
-};
+	var sendForm = function(form){
+		var  url = form.attr('action');
+		var data = form.serializeArray();
+
+		$.ajax({
+			url: url,
+			type: 'POST',
+			dataType: 'json',
+			data: data
+		}).done(function(data){
+			console.log(data);		
+		}).fail( function(){
+			console.log("Проблема сервера");
+		});
+	};
+
+	var showTooltip = function(target){
+		var $target = $(target);
+		$target.data("info");
+		var showTooltip = "<p class='tooltip'>" + $target.data("info") + "</p>";
+		var elem = $target.parent('label');
+		var center = $( 'form' ).width()/2;
+		var i_position = $target.position().left + elem.position().left;
+		if(elem.find('.tooltip').length == 0) {
+			if (i_position < center) {
+				$(target).before(showTooltip);
+				elem.children('.tooltip').addClass('leftHand');
+			} else {
+				$(target).before(showTooltip);
+				elem.children('.tooltip').addClass('rightHand');
+			}
+		} 
+	};
+
+	var changeFile = function() {
+		console.log('perfect');
+		$('.download_field').text($('.upload').val());
+		$('.download_field').removeClass('error');
+	};
 	
 
-function cancel_file() {
-	$('.download_field').removeClass('error');
-	$('.download_field').siblings('.tooltip').css('display','none');
-};
+	var inherit_style = function() {
+		if ($('input[type="file"]').val().length == 0) {
+			$('.download_field').addClass('error');
+		}
+	};
 
-function full_reset() {
-	elem.removeClass('error');
-	elem.siblings('.tooltip').css('display','none');
-};
+	var cancel_error = function() {
+		$(document.activeElement).removeClass('error');
+		$(document.activeElement).siblings('.tooltip').remove();
+	};
 
-function changeAdress() {
 
-	if ($('.upload').val().length > 0) {
-		$('.text_file').text($('.upload').val());
+	return {
+		init:init
 	}
-}
+}());
+
+app.init();

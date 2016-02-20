@@ -82,43 +82,37 @@
 					<a href="">www.site.ru</a>
 					<span>Информация о проекте 4 ревью 2 строки....</span>
 				</div>
-				<div onclick="openPopup()" class="new-work">
+				<div class="new-work">
 					<a href="href://mysite.ru">Добавить проект</a>
 				</div>
 			</section>
 			<div class="clear"></div>
 		</div>
 	</div>
-	<div id="popup" class="add-form">
+	<div id="cover"></div>
+	<div id="popup" class="add_block">
 				<div class="hat"><h2 class="caption-two">Добавление проекта</h2></div>
-				<form action="my.php" class="add_work" onclick="cancel_error()">
-					<div class="tt-wrap">
-						<label class="input_label" for="inputName">Название проекта</label>
-						<div class="tooltip" id="tt_name">Введите название</div>
-						<input class="inputName" type="text" name="name"  placeholder="Введите название">
-					</div>
-					<div class="tt-wrap">
-						<label class="input_label" for="upload">Картинка проекта</label>
-						<div class="tooltip" id="tt_file">Изображение</div>
-						<div class="download_field">
-							<span class="text_file">Загрузите изображение</span>
-							<div class="download_img"></div>
-							<input class="upload" type="file" name="file" onclick="cancel_file()" onchange="changeAdress()">
-						</div>
-					</div>
-					<div class="tt-wrap">
-						<label class="input_label" for="tooltip">URL проекта</label>
-						<div class="tooltip" id="tt_url">Ссылка на проект</div>
-						<input class="url" type="url" name="url" placeholder="Добавить ссылку">
-					</div>
-					<div class="tt-wrap">
-						<label class="input_label" for="text_field">Описание</label>
-						<div class="tooltip" id="tt_textarea">Краткое описание</div>
-						<textarea class="text_field" name="about" cols="49" rows="4" placeholder="Пара слов о Вашем проекте"></textarea>
-					</div> 
-					<button type="button" class="add_button" name="add" onclick="errorInput()">Добавить</button>
+				<form action="my.php" class="add_form">
+					<label>
+						<span class="inputs_name">Название проекта</span>
+						<input class="inputName" type="text" name="name"  placeholder="Введите название" data-info="Введите имя">
+					</label>
+					<label class="download_wrap">
+						<span class="inputs_name">Картинка проекта</span>
+						<div class="download_field">Загрузите картинку</div>
+						<input class="upload" type="file" name="file" data-info="Загрузите картинку">
+					</label>
+					<label>
+						<span class="inputs_name">URL проекта</span>
+						<input class="url" type="url" name="url" placeholder="Добавить ссылку"  data-info="Введите адрес">
+					</label>
+					<label>
+						<span class="inputs_name">Описание</span>
+						<textarea class="text_field" name="about" cols="49" rows="4" placeholder="Пара слов о Вашем проекте" data-info="Введите описание"></textarea>
+					</label>
+					<input type="submit" class="add_button" name="add" value="Добавить">
 				</form>
-				</div>
+	</div>
 	<footer class="footer">
 		<div class="footer-core">
 			<div class="lock">

@@ -20,19 +20,17 @@
 	<![endif]--> 
 	<div class="wrap">
 		<div class="wrap-core">
-			<form action="my.php" class="authorization-form" onclick="cancel_error()">
+			<form action="my.php" class="authorization-form">
 				<div class="hat"><h2 class="caption-two">Авторизуйтесь</h2></div>
-				<div class="wrap_input">
-					<label for="login" class="label">Логин</label>
-					<div class="tooltip tt_login">Введите логин</div>
-					<input type="text" name="login" class="login" placeholder="Введите логин">
-				</div>
-				<div class="wrap_input">
-					<label for="password" class="label">Пароль</label>
-					<div class="tooltip tt_password">Введите пароль</div>
-					<input type="password" name="password" class="password" placeholder="Введите пароль">
-				</div>
-				<button type="button" class="enter_button" name="enter" onclick="errorInput()">Войти</button>
+				<label class="wrap_input">
+					<span class="label">Логин</span>
+					<input type="text" name="login" class="login" placeholder="Введите логин" data-info="Введите имя">
+				</label>
+				<label class="wrap_input">
+					<span class="label">Пароль</span>
+					<input type="password" name="password" class="password" placeholder="Введите пароль" data-info="Введите пароль">
+				</label>
+				<input type="submit" class="enter_button" name="enter" value="Войти">
 			</form>
 			<div class="clear"></div>
 		</div>

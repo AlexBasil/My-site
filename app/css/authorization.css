@@ -48,7 +48,7 @@
 	color: #959aa8;
 }
 
-.authorization-form input {
+.login, .password {
 	width: 414px;
 	height: 60px;
 	padding-left: 10px;
@@ -113,11 +113,10 @@ input:focus:-ms-input-placeholder      {color: #48cbe8; opacity: 0; transition: 
 }
 
 .tooltip {
-	display:none;
 	padding: 4px 7px 3px;
     position: absolute;
-    left: 67px;
-    top: 10px;
+   	left: -22px;
+    top: -86px;
 	font: 20px 'FiraSans Bold', Arial, sans-serif;
 	color: #ffffff;
 	border-radius: 3px 3px 3px 3px;
@@ -129,8 +128,13 @@ input:focus:-ms-input-placeholder      {color: #48cbe8; opacity: 0; transition: 
 .tooltip:after {
 	content: "";
 	position: absolute;
-	left: 60px;
+	left: 54px;
     top: 30px;
 	border: 16px solid transparent;
     border-top: 16px solid #f97e76;
+}
+
+.error {
+	background-color: #fdd5d2;
+	border-color: #f97e76;
 }

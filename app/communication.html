@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/communication.css">
 	<!--[if IE 8]> <html class="ie8" lang="en"> <![endif]-->
+	<script src="bower/jquery/dist/jquery.js"></script>
 	<script src="bower/modernizer/modernizr.js"></script>
 	<script src="bower/html5shiv/dist/html5shiv.js"></script>
 	<script src="bower/jquery.placeholder/jquery.placeholder.js"></script>
@@ -50,29 +51,26 @@
 				<div class="top">
 					<h2 class="caption-two">У вас интересный проект? Напишите мне</h2>
 				</div>
-				<form action="" class="feedback-form">
-					<div class="input-left">
-						<label for="name">Имя</label>
-						<div class="tooltip tooltip_name">Введите название</div>
-						<input type="text" name="name" class="name" onfocus="cancel_error()" placeholder="Как к Вам обращаться">
-					</div>
-					<div class="input-right">
-						<label for="email">Email</label>
-						<div class="tooltip tooltip_email">Введите Email</div>
-						<input type="mail" name="email" class="email" onfocus="cancel_error()" placeholder="Куда мне писать"></div>
-					<div class="wrap_input">	
-						<label for="message">Сообщение</label>
-						<div class="tooltip tooltip_textfield">Добавьте описание</div>
-						<textarea cols="62" rows="8" name="message" class="textarea" onfocus="cancel_error()" placeholder="Кратко в чем суть"></textarea>
-					</div>
-					<label for="picture">Введите код, указанный на картинке</label>
-					<input type="text" name="picture" class="picture">
-					<div class="wrap_input">
-						<div class="tooltip tooltip_capcha">Введите код</div>
-						<input type="text" name="code" class="code" onfocus="cancel_error()" placeholder="Введите код">
-					</div>
-					<input type="submit" value="Отправить" onclick="errorInput()">
-					<input type="reset" value="Очистить" onclick="full_reset()">	
+				<form action="my.php" class="feedback-form">
+					<label class="input-left">
+						<span class="field_name">Имя</span>
+						<input type="text" name="name" class="name" data-info="Введите название" placeholder="Как к Вам обращаться">
+					</label>
+					<label class="input-right">
+						<span class="field_name">Email</span>
+						<input type="mail" name="email" class="email" data-info="Введите Email" placeholder="Куда мне писать">
+					</label>
+					<label class="wrap_input">	
+						<span class="field_name">Сообщение</span>
+						<textarea cols="62" rows="8" name="message" class="textarea" data-info="Добавьте описание"  placeholder="Кратко в чем суть"></textarea>
+					</label>
+					<label class="wrap_input">
+					<span class="field_name">Введите код, указанный на картинке</span>
+					<div  class="picture"></div>
+					<input type="text" name="code" class="code" data-info="Введите код" placeholder="Введите код">
+					</label>
+					<input type="submit" value="Отправить">
+					<input type="reset" value="Очистить">	
 				</form>
 			</section>
 		<div class="clear"></div>
@@ -86,7 +84,6 @@
 			<div class="footer-text">&copy; 2016. Это мой сайт, пожалуйста, не копируйте и не воруйте его</div>
 		</div>
 	</footer>
-	<script src="bower/jquery/dist/jquery.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
