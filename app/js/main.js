@@ -3,17 +3,19 @@ var app = (function() {
 		setUpListeners();
 	};
 	var setUpListeners = function() {
-		var field = $('form').find('input, textarea').not('input[type="submit"], input[type="reset"]');
+		field = $('form').find('input, textarea').not('input[type="submit"], input[type="reset"]');
 		$('.new-work').on('click', showElements);
 		$('#cover').on('click', showElements);
 		$('form').on('submit', checkForm);
 		field.on('click', cancel_error);
+		$('input[type="reset"]').on('click', resetAll);
 		$('input[type="file"]').on('change', changeFile );
 	};
 
 
 	var showElements = function() {
-		$('.add_block').toggle();
+		var win_width = $ ( window ).width()/2 - $('.add_block').width()/2;
+		$('.add_block').toggle().offset({top:100, left: win_width});
 		$('#cover').toggle();
 	};
 
@@ -96,6 +98,10 @@ var app = (function() {
 		$(document.activeElement).siblings('.tooltip').remove();
 	};
 
+	var resetAll = function() {
+		field.removeClass('error');
+		field.siblings('.tooltip').remove();
+	};
 
 	return {
 		init:init
